@@ -1,14 +1,20 @@
 ## usage
 
-npm install mergecsv
+First clone the repository to node_modules folder in your local computer
 
-create a js file like this in the folder of those csv files
+	git clone https://github.com/houzhenni/mergecsv
+	
+Then install the 2 dependensies
+
+	npm install
+
+create a js file like this in the folder of your csv files
 
 	const mergecsv = require('mergecsv');
 
 	mergecsv(__dirname, "new_file_name.csv");
 
-Or simply copy the demo.js file to your folder
+Or simply copy the demo.js file to your folder and execute
 
 	node demo.js
 
