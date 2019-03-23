@@ -1,0 +1,15 @@
+{
+  "name": "mergecsv",
+  "version": "1.0.0",
+  "description": "A script to merge all csv fils with same headers in one folder",
+  "main": "mergecsv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "houzhenni",
+  "license": "ISC",
+  "dependencies": {
+    "csvjson-csv2json": "^5.0.5",
+    "csvjson-json2csv": "^1.0.3"
+  }
+}
