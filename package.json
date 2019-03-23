@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "houzhenni",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "csvjson-csv2json": "^5.0.5",
     "csvjson-json2csv": "^1.0.3"
