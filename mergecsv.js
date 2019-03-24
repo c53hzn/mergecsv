@@ -2,8 +2,8 @@ var fs = require("fs");
 const csv2json = require('csvjson-csv2json');
 const json2csv = require('csvjson-json2csv');
 
-function fileContent(filepath, data_csv) {
-	if (data_csv != "merged.csv") {
+function fileContent(filepath, data_csv, new_file_name) {
+	if (data_csv != new_file_name) {
 		var data = fs.readFileSync(filepath + "\\" + data_csv,'utf-8');
 		//json array [{a: 1, b: 2}, {a: 3, b: 4}]
 		var rawData = csv2json(String(data), {
@@ -27,7 +27,7 @@ function mergeFileInDir(dir, new_file_name){
 		for(let i=0 ; i < files.length ;i++ ){
 			var filename_arr = files[i].split(".");
 			if (filename_arr[filename_arr.length - 1].match(/(CSV|csv)/)) {
-				let tempData = fileContent(dir, files[i]);
+				let tempData = fileContent(dir, files[i], new_file_name);
 				output_arr = output_arr.concat(tempData);
 			}
 		}
