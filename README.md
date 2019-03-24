@@ -66,7 +66,7 @@ Then your merged csv is ready.
 	```
 
 
-解决方案来自[这里](https://stackoverflow.com/questions/12745623/batch-combine-csv-remove-header/12751399#12751399)
+解决方案来自[这里](https://stackoverflow.com/questions/12745623/batch-combine-csv-remove-header/12751399#12751399)    
 这个可以只保留第一个csv文件的表头，但是有个问题是从第二个文件开始的中文会变乱码，所以也不适用。    
 copy命令不会让中文变乱码，但是不能处理csv之间末行和首行粘连的问题，也不能去除多余表头。    
 **我为了能去掉多余的表头，又可以不出现乱码，于是写了这个Node脚本。**
