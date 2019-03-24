@@ -1,6 +1,6 @@
-1. [Usage](#Usage)
+1. [Usage](#usage)
 
-2. [Points to notice](#Notice)
+2. [Points to notice](#notice)
 
 3. [中文说明](#中文说明)
 
@@ -49,18 +49,20 @@ Then your merged csv is ready.
 解决方案来自[这里](https://stackoverflow.com/questions/45652493/merging-text-files-in-bat-with-line-break-between-files)
 
 5. 如果csv文件有表头，其实也有bat脚本可以解决（只适用于全英文数据）    
-	`@echo off
-	setlocal
-	set first=1
-	>new.csv.tmp (
-	  for %%F in (*.csv) do (
-	    if defined first (
-	      type "%%F"
-	      set "first="
-	    ) else more +1 "%%F"
-	  )
-	)
-	ren new.csv.tmp new.csv`    
+
+	@echo off    
+	setlocal    
+	set first=1    
+	>new.csv.tmp (    
+	  for %%F in (\*.csv) do (    
+	    if defined first (    
+	      type "%%F"    
+	      set "first="    
+	    ) else more +1 "%%F"    
+	  )    
+	)    
+	ren new.csv.tmp new.csv    
+
 解决方案来自[这里](https://stackoverflow.com/questions/12745623/batch-combine-csv-remove-header/12751399#12751399)
 这个可以只保留第一个csv文件的表头，但是有个问题是从第二个文件开始的中文会变乱码，所以也不适用。    
 copy命令不会让中文变乱码，但是不能处理csv之间末行和首行粘连的问题，也不能去除多余表头。    
