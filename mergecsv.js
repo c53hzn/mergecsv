@@ -2,6 +2,13 @@ var fs = require("fs");
 const csv2json = require('csvjson-csv2json');
 const json2csv = require('csvjson-json2csv');
 
+if (process.argv[2] && /^\w{1,}\.(csv|CSV)$/.test(process.argv[2])) {
+	mergeFileInDir(process.cwd(), process.argv[2])
+} else {
+	console.log("Please input a valid name for the merged file!")
+}
+
+
 function fileContent(filepath, data_csv, new_file_name) {
 	if (data_csv != new_file_name) {
 		var data = fs.readFileSync(filepath + "\\" + data_csv,'utf-8');
@@ -17,7 +24,6 @@ function fileContent(filepath, data_csv, new_file_name) {
 }
 
 function mergeFileInDir(dir, new_file_name){
-	console.log(dir)
 	fs.readdir(dir, function(error,files){
 		if (error){
 			console.log(error.stack);
@@ -38,7 +44,3 @@ function mergeFileInDir(dir, new_file_name){
 		console.log("\"" + new_file_name + "\" is saved");
 	});
 }
-
-module.exports = function(dir, new_file_name) {
-    mergeFileInDir(dir, new_file_name);
-};
