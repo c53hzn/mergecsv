@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require("fs");
 const csv2json = require('csvjson-csv2json');
 const json2csv = require('csvjson-json2csv');
