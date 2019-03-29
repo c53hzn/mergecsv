@@ -11,5 +11,8 @@
   "dependencies": {
     "csvjson-csv2json": "^5.0.5",
     "csvjson-json2csv": "^1.0.3"
+  },
+  "bin": {
+    "mergecsv": "mergecsv.js"
   }
 }
