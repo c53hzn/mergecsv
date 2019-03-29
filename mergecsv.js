@@ -3,6 +3,10 @@ var fs = require("fs");
 const csv2json = require('csvjson-csv2json');
 const json2csv = require('csvjson-json2csv');
 
+// __dirname is where the scripts are stored
+// process.cwd() is the directory where you execute the command
+// process.argv[2] is the parameter that comes after mergecsv command
+
 if (process.argv[2] && /^\w{1,}\.(csv|CSV)$/.test(process.argv[2])) {
 	mergeFileInDir(process.cwd(), process.argv[2])
 } else {
