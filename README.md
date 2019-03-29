@@ -1,8 +1,20 @@
+# merge your csv files in command line, written in NodeJS script
+
+# NodeJS脚本写的合并csv文件的命令行工具
+
+## Menu
+
 1. [Usage](#usage)
 
 2. [Points to notice](#points-to-notice)
 
-3. [中文说明](#中文说明)
+## 中文说明
+
+1. [使用说明](#使用说明)
+
+2. [注意事项](#注意事项)
+
+3. [其他事项](#其他事项)
 
 ## Usage
 
@@ -14,14 +26,13 @@ Then install the 2 dependensies
 
 	npm install
 
-create a js file like this in the folder of your csv files
+make it a command line function
 
-	const mergecsv = require('mergecsv');    
-	mergecsv(__dirname, "new_file_name.csv");
+	npm link
 
-Or simply copy the demo.js file to your folder and execute
+Go to the folder of your csv files, execute the following command
 
-	node demo.js
+	mergecsv new_file_name.csv
 
 Then your merged csv is ready.
 
@@ -33,7 +44,7 @@ Then your merged csv is ready.
 
 3. If your csv files don't have headers, simply use `copy *.csv new_file_name.csv` in your command line
 
-## 中文说明
+## 使用说明
 
 此脚本可以将文件夹内所有csv文件合并成一个新的csv。
 
@@ -45,18 +56,17 @@ Then your merged csv is ready.
 
 	npm install
 
-然后去你要处理csv的文件夹，新建一个js文件，内容如下
+然后将这个node脚本变成你的电脑上的命令行工具
 
-	const mergecsv = require('mergecsv');    
-	mergecsv(__dirname, "new_file_name.csv");
+	npm link
 
-或者直接用repo里面的demo.js
+接着去你要合并csv文件的文件夹，执行以下命令
 
-	node demo.js
+	mergecsv new_file_name.csv
 
 然后你的合并文件就有了。
 
-注意事项：
+## 注意事项
 
 1. 该脚本只处理csv文件
 
@@ -64,7 +74,7 @@ Then your merged csv is ready.
 
 3. 如果csv文件没有表头，直接在cmd用 `copy *.csv new_file_name.csv` 命令即可
 
-其他事项：
+## 其他事项
 
 1. 有时候原csv文件末尾没有换行，如果用了`copy`命令的话，下一份csv的第一行会和上一份csv的最后一行粘连，此时有一个bat脚本可以解决    
 	`for %f in (*.csv) do type %f>>new_file_name.csv`    
