@@ -20,7 +20,7 @@
 
 First clone the repository to node_modules folder in your local computer
 
-	git clone https://github.com/houzhenni/mergecsv
+	git clone https://github.com/c53hzn/mergecsv
 	
 Then install the 2 dependensies
 
@@ -50,7 +50,7 @@ Then your merged csv is ready.
 
 先把repo克隆到你的本地node_modules文件夹里
 
-	git clone https://github.com/houzhenni/mergecsv
+	git clone https://github.com/c53hzn/mergecsv
 
 然后安装2个依赖
 
